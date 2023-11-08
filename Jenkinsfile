@@ -25,8 +25,8 @@ pipeline{
                     docker.withRegistry('https://registry.hub.docker.com', 'dockerhub') {
                     customImage.push()
                 }
+                }
             }
-        }
         }
         stage('Build On Kubernetes'){
             steps{
